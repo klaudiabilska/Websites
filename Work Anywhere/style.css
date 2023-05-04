@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary:#fff;
+    --secondary: #a2a2a2;
+    --accent: #e2c78c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #151517;
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
