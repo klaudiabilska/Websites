@@ -1,5 +1,5 @@
 ![](./screen.png)
-![](./screen2.png.png)
+![](./screen2.png)
 
 
 ### Links
