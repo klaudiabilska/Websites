@@ -28,3 +28,5 @@ const Hero = () => {
 }
 
 export default Hero
+
+//https://www.youtube.com/watch?v=RbxHZwFtRT4&t=2887s kontynuowac w 1:14:50, dodajemy video do Hero
