@@ -1,9 +1,28 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { heroVideo, smallHeroVideo } from "../utils";
+import { useState } from "react";
+import { useEffect } from "react";
 
 
 const Hero = () => {
+  const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideo : heroVideo);
+
+  const handleVideoSrcSet = () => {
+    if (window.innerWidth < 760) {
+      setVideoSrc(smallHeroVideo);
+    } else {
+      setVideoSrc(heroVideo);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleVideoSrcSet);
+    return () => {
+      window.removeEventListener("resize", handleVideoSrcSet);
+    };
+  })
+
   useGSAP(() => {
     gsap.to("#hero", {
       duration: 1,
@@ -17,8 +36,8 @@ const Hero = () => {
       <div className="h-5/6 w-full flex-center flex-col">
         <p id="hero" className="hero-title">iPhone 15 Pro</p>
         <div className="md:w-10/12 w-9/12">
-          <video>
-            <source src="{videoSrc}" />
+          <video className="pointer-events-none" autoPlay muted playsInline={true} key={videoSrc}>
+            <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
       </div>
@@ -29,4 +48,4 @@ const Hero = () => {
 
 export default Hero
 
-//https://www.youtube.com/watch?v=RbxHZwFtRT4&t=2887s kontynuowac w 1:14:50, dodajemy video do Hero
+// start adding call to action button to buy iphone 1:18:28 https://www.youtube.com/watch?v=RbxHZwFtRT4&t=2887s
