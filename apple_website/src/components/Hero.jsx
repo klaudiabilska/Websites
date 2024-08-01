@@ -25,9 +25,13 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.to("#hero", {
-      duration: 1,
       opacity: 1,
       delay: 1.5
+    })
+    gsap.to("#cta", {
+      opacity: 1,
+      y: -50,
+      delay: 2
     })
   }, [])
  
@@ -42,10 +46,18 @@ const Hero = () => {
         </div>
       </div>
 
+      <div
+        id="cta"
+        className="flex flex-col items-center opacity-0 translate-y-20"
+      >
+        <a href="#highlights" className="btn">Buy</a>
+        <p className="font-normal text-xl">From $199/month or $999</p>
+
+
+      </div>
+
     </section>
   )
 }
 
 export default Hero
-
-// start adding call to action button to buy iphone 1:18:28 https://www.youtube.com/watch?v=RbxHZwFtRT4&t=2887s
