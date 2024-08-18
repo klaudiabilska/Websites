@@ -7,9 +7,14 @@ const VideoCarousel = () => {
   const videoDivRef = useRef([]);
 
   const [video, setVideo] = useState({
-    ///https://www.youtube.com/watch?v=RbxHZwFtRT4&t=2887s 1:35:29
+    isEnd: false,
+    startPlay: false,
+    videoId: 0,
+    isLastVideo: false,
+    isPlaying: false,
+  });
 
-  })
+  //https://www.youtube.com/watch?v=RbxHZwFtRT4&t=2887s%201:35:67
 
   return (
     <>
