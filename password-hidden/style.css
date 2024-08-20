@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #000000 24%, rgb(83, 96, 109) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.input-box {
+    background: rgb(190, 200, 209);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.input-box input {
+    flex: 1; /* Allows the input to take all available space */
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: #000000;
+}
+
+.input-box img {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between input and icon */
+}
+
+.text-below {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    padding-left: 10px; /* Align with the input field's padding */
+}
+
+#message {
+    display: none;
+}
